@@ -1,5 +1,4 @@
 <?php
-
 var_dump($_GET);    
 
 ?>
@@ -10,7 +9,7 @@ var_dump($_GET);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>singleLagu</title>
     <style>
-        * {
+      * {
         margin: 0;
         padding: 0;
         font-family: system-ui;
@@ -72,7 +71,6 @@ var_dump($_GET);
         padding: 20px 0px;
         display: flex;
         flex-direction: column;
-        /* justify-content: center; */
         align-items: center;
         gap: 20px;
         border:1px solid goldenrod;
@@ -82,7 +80,6 @@ var_dump($_GET);
         display: flex;
         padding:20px;
         justify-content: space-between;
-        /* align-items: center; */
         border:1px solid green;
       }
       .gambar{
@@ -95,7 +92,6 @@ var_dump($_GET);
       }
       .deskripsi{
         width:50%;
-        /* height:; */
         border:1px solid red;
         display: flex;
         flex-direction: column;
@@ -146,7 +142,6 @@ var_dump($_GET);
       details{
         width: 40px;
         height:40px;
-        /* background: transparent; */
         border: 1px solid white;
         position: absolute;
         top: 0px;
@@ -157,9 +152,7 @@ var_dump($_GET);
       details summary{
         width: 40px;
         height:40px;
-        /* background: blue; */
         justify-content:center;
-        /* align-items: center; */
         line-height:37px;
         display: flex;
         gap: 5px;
@@ -178,6 +171,11 @@ var_dump($_GET);
         padding: 5px;
         box-sizing:border-box;
       }
+      details ul a{
+        text-decoration:none;        
+        color:white;
+        font-weight: 600;
+      }
       details ul li {
         height: 40px;
         display:flex;
@@ -189,8 +187,7 @@ var_dump($_GET);
         transition: 0.2s;
       }
       details ul li:hover {
-        /* border: 1px solid white; */
-        background: white;
+        background:rgba(255, 255, 255, 0.767);
         color: black;
       }
     </style>
@@ -220,7 +217,7 @@ var_dump($_GET);
                     <span>•</span>
                   </summary>
                   <ul>
-                    <li>Edit Info</li>
+                    <a href="edit.php?nama=<?= $_GET["nama"]?>&artis=<?= $_GET["artis"]?>&music=<?= $_GET["music"]?>&image=<?= $_GET["image"]?>"><li>Edit Info</li></a>
                   </ul>
                 </details>
                 <h2><?= $_GET["nama"] ?></h2>
